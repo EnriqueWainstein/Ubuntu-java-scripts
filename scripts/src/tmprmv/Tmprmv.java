@@ -15,7 +15,7 @@ public class Tmprmv {
         
 		scanner.clean(path);
 		report.print();
-		System.out.println("probando");
+		
          
 	}
 
