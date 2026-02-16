@@ -1,0 +1,5 @@
+//No usar script como sudo
+//esto es una version simplificada de free(en porcentaje en ves de kb)
+//script hecho para demostrar lectura de archivos- division de responsabilidades
+//ToDo: escribir documentacion explicando funcionamiento
+//ToDo: comentar el codigo para no olvidarme que hace cada cosa
