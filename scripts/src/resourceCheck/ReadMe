@@ -1,5 +1,35 @@
 //No usar script como sudo
-//esto es una version simplificada de free(en porcentaje en ves de kb)
-//script hecho para demostrar lectura de archivos- division de responsabilidades
-//ToDo: escribir documentacion explicando funcionamiento
-//ToDo: comentar el codigo para no olvidarme que hace cada cosa
+/*
+ * ResourceCheck
+ *
+ * Pequeña herramienta de monitoreo para Linux escrita en Java.
+ * Lee métricas del sistema  desde /proc para calcular
+ * uso de CPU y memoria RAM en tiempo real.
+ *
+ * CPU:
+ * Se se saca un snapshot de los contadores acumulados de /proc/stat dos veces con
+ * un intervalo de 500ms. A partir de la diferencia entre ambas
+ * lecturas se calcula el porcentaje de CPU utilizada durante
+ * ese intervalo.
+ *
+ * RAM:
+ * Se parsea /proc/meminfo para obtener MemTotal y MemAvailable.
+ * La memoria utilizada se calcula como:
+ *
+ *    used = MemTotal - MemAvailable
+ *
+ * El programa imprime continuamente las métricas formateadas
+ * en consola.
+ *
+ * Este proyecto reimplementa de forma simplificada parte de la
+ * lógica utilizada por herramientas como:
+ *
+ *   - free   (uso de memoria)
+ *   - top    (uso de CPU)
+ *   - mpstat (estadísticas de CPU)
+ *
+ * Objetivo:
+ * demostrar interacción con métricas del kernel Linux,
+ * parsing de /proc y cálculo de estadísticas del sistema
+ * usando Java.
+ */
